@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatarinaEscreventeDev</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="social-icons">
+            <a href="https://github.com/Catarina-SE?tab=repositories" class="social-link">
+                <img src="Images/GitHubIcon.png" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/catarinaescrevente/" class="social-link">
+                <img src="Images/LinkedInIcon.png" alt="LinkedIn" class="social-icon">
+            </a>
+        </div>
+        
+        <div class="nav-container">
+            <nav class="nav">
+                <a href="Home.html" class="nav-link">
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="#projects" class="nav-link active">
+                    <span class="nav-text">Projects</span>
+                </a>
+              <!--  <a href="#about" class="nav-link">
+                    <span class="nav-text">About</span>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <span class="nav-text">Contact</span>
+                </a>
+                -->
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content fade-in-up">
+                <div class="hero-text">
+                    <img src="Images/PROJECT.png" alt="Project Survival VR" class="hero-title floating">
+                    <p class="hero-subtitle">
+                        Step into a VR world where survival meets adventure. Master the art of climbing, 
+                        explore natural landscapes, and experience the thrill of survival in dense conditions.
+                    </p>
+                    <a href="https://github.com/Catarina-SE/ProjectSurvivalVR" class="github-button">
+                        <img src="Images/GitHubIcon.png" alt="GitHub" class="button-icon">
+                        GitHub Repository
+                    </a>
+                </div>
+                <div class="hero-visual">
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/uil_3ZbI-z0?si=wEIjQi7-b66Qv6SX&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Game Mechanics Section -->
+    <section class="mechanics-section">
+        <div class="mechanics-container">
+            <div class="mechanics-intro">
+                <h2 class="section-title">Current Game Mechanics</h2>
+                <p class="section-subtitle mechanics-subtitle">
+                    Discover the  gameplay systems that make Project Survival VR unique
+                </p>
+            </div>
+
+            <div class="mechanics-grid">
+
+                <div class="mechanic-card">
+                    <div class="mechanic-icon">🤏</div>
+                    <h3 class="mechanic-title">Advanced Hand Interactions</h3>
+                    <p class="mechanic-description">
+                        Smart grab system that automatically switches between snap-to-grab-points for tools and free-form grabbing for objects. Features physics constraints, proximity detection, and visual feedback.
+                    </p>
+                </div>
+
+                <div class="mechanic-card">
+                    <div class="mechanic-icon">🧗</div>
+                    <h3 class="mechanic-title">VR Climbing System</h3>
+                    <p class="mechanic-description">
+                        Primary hand control where the most recent grabbing hand controls character movement. Includes distance-based auto-release, frozen hand meshes during climbing, and prevents conflicting inputs when both hands are active.
+                    </p>
+                </div>
+
+                <div class="mechanic-card">
+                    <div class="mechanic-icon">🚶</div>
+                    <h3 class="mechanic-title">Comfort-First Locomotion</h3>
+                    <p class="mechanic-description">
+                        Multiple movement options including teleportation, smooth locomotion, snap turn (15°/30°/45°), and smooth camera rotation. Real-time in-game settings prevent motion sickness with personalized comfort levels.
+                    </p>
+                </div>
+
+                <div class="mechanic-card">
+                    <div class="mechanic-icon">💧</div>
+                    <h3 class="mechanic-title">Physical Survival System</h3>
+                    <p class="mechanic-description">
+                        Component-based survival tracking hunger, thirst, temperature, and stamina. Features realistic consumption mechanics - tilt water bottles to drink, bring food to mouth proximity, with activity-based drain affecting gameplay consequences.
+                    </p>
+                </div>
+
+                <div class="mechanic-card">
+                    <div class="mechanic-icon">🏔️</div>
+                    <h3 class="mechanic-title">Environmental Response</h3>
+                    <p class="mechanic-description">
+                        Day/night temperature cycles, heat zones near fireplaces for warmth recovery, and head collision prevention with height adaptation. Multi-directional detection using sphere and raycast combinations with smoothed displacement forces.
+                    </p>
+                </div>
+                <div class="mechanic-card">
+                    <div class="mechanic-icon">+</div>
+                    <h3 class="mechanic-title">Work in Progress</h3>
+                    <p class="mechanic-description">
+                        Ongoing development to enhance gameplay mechanics and introduce new features.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-container">
+            <h2 class="section-title-features">Key Features</h2>
+            
+            <div class="features-content">
+                <div class="features-text">
+                    <div class="feature-item">
+                        <div class="feature-bullet"></div>
+                        <div class="feature-text">
+                            <strong>Interface-Based Architecture:</strong> Clean C++ design with IInteractable interfaces and component-based systems for maintainable, extensible code
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-bullet"></div>
+                        <div class="feature-text">
+                            <strong>Hybrid Grab System:</strong> 5-iteration development process resulting in intelligent switching between snap-to-grab-points and free-form object manipulation
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-bullet"></div>
+                        <div class="feature-text">
+                            <strong>Physics Constraint Integration:</strong> Weight-based constraints requiring both hands for heavy objects, with tuned strength parameters for realistic manipulation
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-bullet"></div>
+                        <div class="feature-text">
+                            <strong>Event-Based Communication:</strong> Broadcast event system prevents dependencies between game systems while maintaining clear component interactions
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-bullet"></div>
+                        <div class="feature-text">
+                            <strong>Motion Sickness Prevention:</strong> Multiple locomotion options with real-time comfort adjustments - prioritizing player comfort over complexity
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="features-image">
+                    <div class="slideshow-container">
+                        <div class="slideshow-wrapper">
+                            <img src="Images/psvr-2.png" alt="Project Survival VR Screenshot 2" class="slide active">
+                            <img src="Images/psvr-3.png" alt="Project Survival VR Screenshot 3" class="slide">
+                            <img src="Images/psvr-4.png" alt="Project Survival VR Screenshot 4" class="slide">
+                            <img src="Images/psvr-5.png" alt="Project Survival VR Screenshot 5" class="slide">
+                            <img src="Images/psvr-6.png" alt="Project Survival VR Screenshot 6" class="slide">
+                            <img src="Images/psvr-8.png" alt="Project Survival VR Screenshot 8" class="slide">
+                            <img src="Images/psvr-9.png" alt="Project Survival VR Screenshot 9" class="slide">
+                            <img src="Images/psvr-10.png" alt="Project Survival VR Screenshot 10" class="slide">
+                            <img src="Images/psvr-11.png" alt="Project Survival VR Screenshot 11" class="slide">
+                            <img src="Images/psvr-12.png" alt="Project Survival VR Screenshot 12" class="slide">
+                            <img src="Images/psvr-13.png" alt="Project Survival VR Screenshot 13" class="slide">
+                        </div>
+                        
+                        <div class="slideshow-controls">
+                            <button class="slideshow-btn prev-btn">❮</button>
+                            <button class="slideshow-btn next-btn">❯</button>
+                        </div>
+                        
+                        <div class="slideshow-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="tech-section">
+        <h2 class="section-title-technologies">Technologies Used</h2>
+        <p class="section-subtitle mechanics-subtitle">
+            Built with cutting-edge tools and technologies for optimal VR performance
+        </p>
+        
+        <div class="tech-grid">
+            <a href="https://www.unrealengine.com/" target="_blank" class="tech-card">
+                <h3 class="tech-name">Unreal Engine 5</h3>
+                <p class="tech-description">Primary game engine for advanced graphics and VR support</p>
+            </a>
+            
+            <div class="tech-card">
+                <h3 class="tech-name">C++</h3>
+                <p class="tech-description">Core gameplay systems and performance-critical components</p>
+            </div>
+            
+            <div class="tech-card">
+                <h3 class="tech-name">Visual Studio Community</h3>
+                <p class="tech-description">Development environment for C++ programming</p>
+            </div>
+            
+            <a href="https://www.diversion.dev/" target="_blank" class="tech-card">
+                <h3 class="tech-name">Diversion</h3>
+                <p class="tech-description">Version control and project management</p>
+            </a>
+            
+            <div class="tech-card">
+                <h3 class="tech-name">Meta Quest 2</h3>
+                <p class="tech-description">Target VR platform for standalone gaming</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" src="" alt="" class="modal-image">
+            <div class="modal-caption"></div>
+        </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Scroll to top">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="currentColor"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

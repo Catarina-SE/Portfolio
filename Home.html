@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatarinaEscreventeDev</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="social-icons">
+            <a href="https://github.com/Catarina-SE?tab=repositories" class="social-link">
+                <img src="Images/GitHubIcon.png" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/catarinaescrevente/" class="social-link">
+                <img src="Images/LinkedInIcon.png" alt="LinkedIn" class="social-icon">
+            </a>
+        </div>
+        
+        <div class="nav-container">
+        <!-- <div class="code-element">#include "AwesomePortfolio.h"</div> -->
+            <nav class="nav">
+                <a href="#home" class="nav-link active">
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="#projects" class="nav-link">
+                    <span class="nav-text">Projects</span>
+                </a>
+                <!--
+                <a href="#about" class="nav-link">
+                    <span class="nav-text">About</span>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <span class="nav-text">Contact</span>
+                </a>
+            -->
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="main-content">
+            <h1 class="greeting">Hi, I'm Catarina.</h1>
+            <p class="subtitle" id="subtitle"></p>
+        </div>
+        
+        <div class="profile-image">
+            <img src="Images/ProfilePic.jpg" alt="Catarina's Profile Picture">
+        </div>
+        
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll down</span>
+            <div class="scroll-icon"></div>
+        </div>
+        
+        <div class="timestamp-info">
+            <div class="time" id="current-time">21.13.43</div>
+            <div id="current-date">12/07/2025</div>
+            <div>Europe, Portugal</div>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="section-content">
+            <div class="text-content">
+                <h2 class="section-title">Project Survival VR</h2>
+                 <p class="section-subtitle-homepage">Currently On Development</p>
+                <br>
+                <p class="project-description">An immersive VR experience built entirely in C++, focused on survival and climbing. The goal is to create an engaging and challenging environment for players while maintaining a smooth experience.</p>
+
+                <div class="button-container">
+                    <a href="ProjectSurvivalVR.html" class="view-details-button">
+                    View Details
+                    </a>
+
+                    <a href="https://github.com/Catarina-SE/ProjectSurvivalVR" class="github-button">
+                    <img src="Images/GitHubIcon.png" alt="GitHub" class="button-icon">
+                    GitHub Repository
+                    </a>
+                </div>
+                
+            </div>
+            <div class="image-content">
+                <img src="Images/ProjectSurvivalVR2.jpg" alt="Project Survival VR">
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Gallery Section -->
+    <section id="projects" class="projects-gallery-section">
+        <!-- Floating Background Icons -->
+        <div class="background-icons">
+            <div class="floating-icon icon-1">{}</div>
+            <div class="floating-icon icon-2">C++</div>
+            <div class="floating-icon icon-3">;</div>
+            <div class="floating-icon icon-4">{ }</div>
+            <div class="floating-icon icon-5">++</div>
+            <div class="floating-icon icon-6">#</div>
+            <div class="floating-icon icon-7">( )</div>
+            <div class="floating-icon icon-8">[ ]</div>
+            <div class="floating-icon icon-9">&&</div>
+            <div class="floating-icon icon-10">||</div>
+            <div class="floating-icon icon-11">if</div>
+            <div class="floating-icon icon-12">C#</div>
+            <div class="floating-icon icon-13">UE5</div>
+            <div class="floating-icon icon-14">!</div>
+            <div class="floating-icon icon-15">=></div>
+        </div>
+        
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <h2 class="gallery-title">My Projects</h2>
+                <p class="gallery-subtitle">A collection of my work during my gaming development journey</p>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="vr">VR</button>
+                <button class="filter-btn" data-filter="fps">FPS</button>
+                <button class="filter-btn" data-filter="multiplayer">Multiplayer</button>
+                <button class="filter-btn" data-filter="engine">Engine</button>
+                <button class="filter-btn" data-filter="graphics">Graphics</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 - Survival VR -->
+                <div class="project-card" data-category="vr game">
+                    <div class="project-image">
+                        <img src="Images/ProjectSurvivalVR.jpg" alt="Project Survival VR">
+                        <div class="project-overlay">
+                            <a href="ProjectSurvivalVR.html" class="view-project-btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Project Survival VR</h3>
+                        <p class="project-desc">Immersive VR survival experience with climbing mechanics.</p>
+                        <div class="project-tags">
+                            <span class="tag">Unreal Engine 5</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">VR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Echoes of GearHeart -->
+                <div class="project-card" data-category="fps">
+                    <div class="project-image">
+                        <img src="Images/EchoesOfGearHeart.png" alt="Project Echoes of GearHeart">
+                        <div class="project-placeholder">Echoes of GearHeart</div>
+                        <div class="project-overlay">
+                            <a href="#" class="view-project-btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Echoes of GearHeart</h3>
+                        <p class="project-desc">A narrative driven First Person Shooter where players need to eliminate special enemies with different weapons.</p>
+                        <div class="project-tags">
+                            <span class="tag">Blueprint Visual Scripting</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Unreal Engine 5</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Project 3 - 2D Game Engine -->
+                <div class="project-card" data-category="engine graphics">
+                    <div class="project-image">
+                        <img src="Images/2dgameengine.png" alt="Project 2D Game Engine">
+                        <div class="project-placeholder">2D Game Engine</div>
+                        <div class="project-overlay">
+                            <a href="#" class="view-project-btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">2D Game Engine</h3>
+                        <p class="project-desc">Custom-built 2D Game Engine implemented in C++ with SDL2, OpenGL and Box2D, featuring a space shooter demo.</p>
+                        <div class="project-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">OpenGL</span>
+                            <span class="tag">SDL2</span>
+                            <span class="tag">Box2D</span>
+                        </div>
+                    </div>
+                </div>
+                
+              
+                
+                <!-- Project 4 - 3D Scene Viewer -->
+                <div class="project-card" data-category="graphics">
+                    <div class="project-image">
+                        <img src="Images/ModelLoader.png" alt="Project 3D Scene Viewer">
+                        <div class="project-placeholder">3D Scene Viewer</div>
+                        <div class="project-overlay">
+                            <a href="#" class="view-project-btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">3D Scene Viewer</h3>
+                        <p class="project-desc">3D Scene Viewer built with OpenGL.</p>
+                        <div class="project-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">OpenGL</span>
+                            <span class="tag">Vertex & Fragment Shaders</span>
+                            <span class="tag">Matrix Transformations</span>
+                            <span class="tag">FPS Camera</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to top button -->
+    <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Scroll to top">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="currentColor"/>
+        </svg>
+    </button>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
