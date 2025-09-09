@@ -2202,6 +2202,25 @@ body {
     50% { transform: translateY(-10px); }
 }
 
+/* Reduce floating animation on mobile to prevent cutting off */
+@media (max-width: 768px) {
+    .floating {
+        animation: floating-mobile 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating-mobile {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+    }
+}
+
+/* Disable floating animation on very small screens */
+@media (max-width: 480px) {
+    .floating {
+        animation: none;
+    }
+}
+
 /* VR Page specific GitHub button styling */
 .hero-section .github-button {
     padding: 8px 16px !important;
