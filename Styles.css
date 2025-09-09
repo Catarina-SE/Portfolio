@@ -180,12 +180,13 @@ body {
 .container {
     background: #151418 url('Images/background.svg') no-repeat center center;
     background-size: cover;
-    height: 80vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     position: relative;
+    padding: 2rem;
 }
 
 .main-content {
@@ -334,34 +335,6 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .main-content {
-        text-align: center;
-        padding: 0 2rem;
-    }
-    
-    .profile-image {
-        position: relative;
-        right: auto;
-        top: auto;
-        transform: none;
-        margin: 2rem auto 0;
-        width: 200px;
-        height: 200px;
-    }
-    
-    .container {
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
-    }
-    
-    .timestamp-info {
-        bottom: 5%;
-        right: 5%;
-    }
-}
-
 /* New content section */
 .content-section {
     padding: 4rem 2rem;
@@ -395,9 +368,29 @@ body {
 .section-title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 300;
-    color: #333;
+    color: #333 !important;
     line-height: 1.2;
     margin: 0;
+}
+
+/* Ensure content section titles are always dark */
+.content-section .section-title {
+    color: #333 !important;
+}
+
+/* Mobile adjustments - keep dark text on white background */
+@media (max-width: 768px) {
+    .content-section .section-title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        color: #333 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-section .section-title {
+        font-size: clamp(1.3rem, 6vw, 2rem);
+        color: #333 !important;
+    }
 }
 
 .image-content {
@@ -562,33 +555,6 @@ body {
     background: #e0e0e0;
     transform: translateY(-2px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-    .content-section .section-content {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-    }
-    
-    .content-section .text-content {
-        text-align: center;
-    }
-    
-    .content-section .image-placeholder {
-        width: 100%;
-        max-width: 350px;
-        height: 250px;
-    }
-    
-    .content-section .image-content img {
-        max-width: 350px;
-        max-height: 250px;
-    }
-    
-    .technologies-icons {
-        justify-content: center;
-    }
 }
 
 /* Projects Gallery Section */
@@ -846,19 +812,187 @@ body {
     border: 1px solid #444;
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE DESIGN IMPROVEMENTS ===== */
+
+/* Tablet and smaller desktop screens */
+@media (max-width: 1024px) {
+    .header {
+        padding: 1rem 2rem;
+    }
+    
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .main-content {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .profile-image {
+        margin-left: 2rem;
+    }
+    
+    .section-content {
+        gap: 2rem;
+    }
+}
+
+/* Mobile and tablet landscape */
 @media (max-width: 768px) {
+    /* Header improvements */
+    .header {
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        background: transparent;
+        backdrop-filter: none;
+    }
+    
+    .nav-container {
+        position: relative;
+        left: auto;
+        transform: none;
+        margin-top: 0;
+    }
+    
+    .nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+    
+    .code-element {
+        display: none;
+    }
+    
+    /* Container improvements */
+    .container {
+        min-height: 100vh;
+        padding: 2rem 1rem;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .main-content {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    
+    .greeting {
+        font-size: clamp(2rem, 6vw, 3rem);
+        margin-bottom: 0.5rem;
+    }
+    
+    .subtitle {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        position: static;
+        margin-top: 0.5rem;
+        max-width: 100%;
+    }
+    
+    .profile-image {
+        position: relative;
+        margin: 0 auto;
+        width: clamp(120px, 25vw, 200px);
+        height: clamp(120px, 25vw, 200px);
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+    
+    .timestamp-info {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Content section improvements */
+    .content-section {
+        padding: 2rem 1rem;
+    }
+    
+    .section-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .text-content {
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+    
+    .image-content {
+        margin: 0 auto;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-content img {
+        max-width: 100%;
+        max-height: 300px;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .view-details-button,
+    .github-button {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+    
+    .technologies-icons {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    
+    .tech-box {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    /* Projects gallery improvements */
     .projects-gallery-section {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
     }
     
     .filter-buttons {
         gap: 0.5rem;
+        justify-content: center;
     }
     
     .filter-btn {
-        padding: 8px 16px;
         font-size: 0.8rem;
+        padding: 8px 16px;
+        min-height: 44px;
+        touch-action: manipulation;
     }
     
     .projects-grid {
@@ -877,8 +1011,234 @@ body {
     .gallery-subtitle {
         font-size: 1rem;
     }
+    
+    /* Scroll to top button */
+    .scroll-to-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
 }
 
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .nav {
+        gap: 0.5rem;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .container {
+        padding: 5rem 0.5rem 1rem;
+    }
+    
+    .main-content {
+        margin-top: 0;
+    }
+    
+    .greeting {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .content-section {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .section-title {
+        font-size: clamp(1.3rem, 6vw, 2rem);
+    }
+    
+    .technologies-icons {
+        gap: 0.5rem;
+    }
+    
+    .tech-box {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+    
+    .button-container {
+        gap: 0.75rem;
+    }
+    
+    .view-details-button,
+    .github-button {
+        max-width: 200px;
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+    
+    .projects-gallery-section {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .filter-buttons {
+        gap: 0.25rem;
+    }
+    
+    .filter-btn {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+    .header {
+        padding: 0.5rem;
+    }
+    
+    .nav {
+        gap: 0.25rem;
+    }
+    
+    .nav-link {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+    
+    .container {
+        padding: 4rem 0.25rem 1rem;
+    }
+    
+    .greeting {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .content-section {
+        padding: 1rem 0.25rem;
+    }
+    
+    .tech-box {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+    
+    .filter-btn {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    .container {
+        min-height: auto;
+        padding: 1rem;
+    }
+    
+    .main-content {
+        margin-top: 0;
+    }
+    
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .social-icon {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .scroll-indicator {
+        animation: none;
+    }
+    
+    .floating-icon {
+        animation: none;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .content-section {
+        background: white !important;
+        color: #333 !important;
+    }
+    
+    .section-title {
+        color: #333 !important;
+    }
+    
+    .project-description {
+        color: #666 !important;
+    }
+    
+    .tech-box {
+        background: #333;
+        color: #e0e0e0;
+        border-color: #555;
+    }
+    
+    .tech-box:hover {
+        background: #444;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .scroll-indicator,
+    .scroll-to-top-btn,
+    .background-icons {
+        display: none;
+    }
+    
+    .container {
+        background: white;
+        color: black;
+    }
+    
+    .projects-gallery-section {
+        background: white;
+        color: black;
+    }
+    
+    .project-card {
+        break-inside: avoid;
+    }
+}
+
+/* ===== END RESPONSIVE DESIGN IMPROVEMENTS ===== */
 
 /* Project Survival VR CSS code */
 
@@ -989,6 +1349,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Center hero text on smaller screens */
+@media (max-width: 768px) {
+    .hero-text {
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .hero-title {
@@ -1623,11 +1993,22 @@ body {
         color: #fff !important
     }
     
+    .section-subtitle {
+        font-size: 1rem;
+        color: #ccc !important;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        font-weight: 500;
+        align-items: center;
+    }
+    
     .image-content {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 6rem;
+        margin: 0 auto;
+        max-width: 100%;
     }
     
     /* Technologies Mobile Styles */
@@ -1823,17 +2204,20 @@ body {
 
 /* VR Page specific GitHub button styling */
 .hero-section .github-button {
-    padding: 6px 12px !important;
-    font-size: 12px !important;
-    gap: 6px !important;
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+    gap: 8px !important;
     max-width: none !important;
-    width: 40% !important;
+    width: auto !important;
     justify-content: center !important;
+    display: flex !important;
+    margin: 0 !important;
+    align-self: flex-start !important;
 }
 
 .hero-section .github-button .button-icon {
-    width: 14px !important;
-    height: 14px !important;
+    width: 16px !important;
+    height: 16px !important;
 }
 
 /* VR Page specific video container styling */
@@ -1842,12 +2226,58 @@ body {
     width: 100% !important;
     height: 350px !important;
     aspect-ratio: 16/9;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .hero-section .video-container iframe {
     width: 100% !important;
     height: 100% !important;
     border-radius: 12px;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Responsive video container for smaller screens */
+@media (max-width: 768px) {
+    .hero-section .video-container {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: 250px !important;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section .video-container {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: 200px !important;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-section .video-container {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: 180px !important;
+        margin: 0 auto;
+    }
+}
+
+/* Ensure no horizontal overflow */
+.hero-section {
+    overflow-x: hidden;
+}
+
+.hero-container {
+    overflow-x: hidden;
 }
 
 /* Mechanics section title styling */
@@ -1858,9 +2288,60 @@ body {
 /* Hero section image title styling */
 .hero-section .hero-title {
     max-width: 400px !important;
-    width: 100% !important;
+    width: auto !important;
     height: auto !important;
     object-fit: contain;
+    display: block;
+    margin: 0 !important;
+}
+
+/* Responsive sizing for Project Survival VR logo */
+@media (max-width: 768px) {
+    .hero-section .hero-title {
+        max-width: 300px !important;
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .hero-section .github-button {
+        align-self: center !important;
+        margin: 0 auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section .hero-title {
+        max-width: 250px !important;
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .hero-section .github-button {
+        align-self: center !important;
+        margin: 0 auto !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-section .hero-title {
+        max-width: 200px !important;
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .hero-section .github-button {
+        align-self: center !important;
+        margin: 0 auto !important;
+    }
 }
 
 /* Mechanics subtitle specific styling */
@@ -1900,4 +2381,58 @@ body {
     margin-bottom: 1rem;
     font-weight: 500;
     align-items: center;
+}
+
+/* Project Survival VR specific header centering */
+.header.centered-nav {
+    justify-content: center;
+    position: relative;
+}
+
+.header.centered-nav .nav-container {
+    position: relative;
+    left: auto;
+    transform: none;
+    margin-top: 0;
+}
+
+.header.centered-nav .social-icons {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Mobile adjustments for centered nav - exactly like homepage */
+@media (max-width: 768px) {
+    .header.centered-nav {
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1.5rem;
+    }
+    
+    .header.centered-nav .social-icons {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        order: 1;
+        margin-bottom: 0.5rem;
+    }
+    
+    .header.centered-nav .nav-container {
+        order: 2;
+        position: relative;
+        left: auto;
+        transform: none;
+        margin-top: 0;
+    }
+    
+    .header.centered-nav .nav {
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
 }
